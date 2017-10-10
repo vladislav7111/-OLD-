@@ -8,16 +8,15 @@ import java.util.Scanner;
 
    static int[] array;
 
-    //// Создание массива
+
     static void createMassive() {
         Scanner input = new Scanner(System.in);
         System.out.print("Введите длинну массива(меньше 10): ");
         int size = input.nextInt();
         while (size>=10){
-            System.out.println("Введите количество элементов меньше 10...");
+            System.out.println("Введите корректную длинну массива.");
             size = input.nextInt();
         }
-
         array = new int[size];
         System.out.println("Введите элементы массива: ");
         for (int i = 0; i < size; i++) {
@@ -28,16 +27,14 @@ import java.util.Scanner;
         }System.out.println();
     }
 
-    //// максимальное значение массива
     static void maxValueInMassive(int mas[]) {
         int maximum = mas[0];
         System.out.print("Максимальное значение: ");
-
         for (int i = 0; i < mas.length; i++)
             if (maximum < mas[i]) maximum = mas[i];
         System.out.println(maximum);
     }
-    //// минимальное значение массива
+
     static void minValueInMassive(int mas[]) {
         int minimum = mas[0];
         System.out.print("Минимальное значение: ");
@@ -46,12 +43,11 @@ import java.util.Scanner;
         System.out.println(minimum);
     }
 
-    //// количество элементов
     static void kolElementov(int mas[]) {
         int a=mas.length;
         System.out.println("Колическтво элементов массива:" + a);
     }
-    //// Сумма элементов
+
     static void summaElementov(int mas[]) {
         int sum=0;
         for(int i=0; i<mas.length; i++) {
@@ -60,7 +56,7 @@ import java.util.Scanner;
         System.out.println("Сумма элементов массива: " + sum);
     }
 
-    //// Среднее значение элементов
+
     static void averageValue(int mas[]) {
         double average = 0;
         if (mas.length > 0)
@@ -70,7 +66,7 @@ import java.util.Scanner;
                 sum += mas[j];
             }
             average = sum / mas.length;
-            System.out.println("Среднее значение элементов массива: "+average);
+            System.out.println("Среднее значение всех элементов массива: " + average);
         }
     }
 
@@ -90,7 +86,6 @@ import java.util.Scanner;
         }
     }
 
-
     static void sortirovkaMassiva(int[] mas) {
         boolean changes;
         do {
@@ -103,16 +98,12 @@ import java.util.Scanner;
                     changes = true;
                 }
             }
-
         }
         while (changes);
         for (int v : mas)
             System.out.print(v + " ");
     }
 
-
-
-    ////////////Замена элемента массива ///////////
     static void zamenaElementaMassiva(int[] mas) {
         Scanner input = new Scanner(System.in);
         System.out.print("Введите номер элемента для замены:");

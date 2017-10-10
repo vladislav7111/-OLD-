@@ -10,7 +10,6 @@ import static lesson1.hometask1.Massive.array;
  class Menu {
 
 
-    //////////Первый уровень/////////////
     static void createMenu() throws IOException {
         BufferedReader k = new BufferedReader (new InputStreamReader(System.in));
         System.out.println("\n" +
@@ -43,7 +42,7 @@ import static lesson1.hometask1.Massive.array;
         System.out.println("Досвидания...");
     }
 
-    /////////////// Первый уровень: Операции /////////////////////////
+
     static void createMenu2Level() throws IOException {
         BufferedReader m = new BufferedReader (new InputStreamReader(System.in));
         System.out.println("\n" +
@@ -79,7 +78,6 @@ import static lesson1.hometask1.Massive.array;
 
     }
 
-    /////////////// Первый уровень: Печать /////////////////////////
     static void createMenu2LevelPrint() throws IOException {
         BufferedReader p = new BufferedReader (new InputStreamReader(System.in));
         System.out.println("\n" +
@@ -118,7 +116,6 @@ import static lesson1.hometask1.Massive.array;
 
     }
 
-    ////////////// Второй уровень: Поиск ////////////////
     static void createMenu2Level2Seach() throws IOException {
         BufferedReader q = new BufferedReader (new InputStreamReader(System.in));
         System.out.println("\n" +
@@ -153,7 +150,7 @@ import static lesson1.hometask1.Massive.array;
         } while (!quit);
 
     }
-    //////////////////// Третий уровень: Вычисление значений ///////////////////
+
     static void createMenu2Level2() throws IOException {
         BufferedReader g = new BufferedReader (new InputStreamReader(System.in));
         System.out.println("\n" +
