@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 
 
-public class Massive {
+ class Massive {
 
    static int[] array;
 

@@ -7,8 +7,7 @@ import java.io.InputStreamReader;
 import static lesson1.hometask1.Massive.array;
 
 
-
-public class Menu {
+ class Menu {
 
 
     //////////Первый уровень/////////////
