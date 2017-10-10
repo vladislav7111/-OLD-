@@ -8,6 +8,8 @@ import static lesson1.hometask1.Massive.array;
 
 public class Menu {
 
+
+
     static void createMenu() throws IOException {
         BufferedReader k = new BufferedReader (new InputStreamReader(System.in));
         MenuOptions.Sout1levelMenu();
@@ -19,11 +21,11 @@ public class Menu {
             switch (menuItem) {
                 case 1:
                     System.out.println("Вы выбрали Операции.");
-                    createMenu2Level();
+                    createOperations();
                     break;
                 case 2:
                     System.out.println("Вы выбрали Печать.");
-                    createMenu2LevelPrint();
+                    createPrint();
 
                     break;
                 case 3:
@@ -36,7 +38,9 @@ public class Menu {
         System.out.println("Досвидания...");
     }
 
-    static void createMenu2Level() throws IOException {
+
+
+    static void createOperations() throws IOException {
         BufferedReader m = new BufferedReader (new InputStreamReader(System.in));
         MenuOptions.SoutOperations();
         boolean quit = false;
@@ -46,10 +50,10 @@ public class Menu {
             menuItem2Level = Integer.parseInt(m.readLine());
             switch (menuItem2Level) {
                 case 1:
-                    createMenu2Level2();
+                    createCalculatingValues();
                     break;
                 case 2:
-                    createMenu2Level2Seach();
+                    createSeach();
                     break;
                 case 3:
                     MenuOptions.Sout1levelMenu();
@@ -62,7 +66,7 @@ public class Menu {
 
     }
 
-    static void createMenu2LevelPrint() throws IOException {
+    static void createPrint() throws IOException {
         BufferedReader p = new BufferedReader (new InputStreamReader(System.in));
         System.out.println("\n" +
                 "Выберите действие?\n" +
@@ -96,7 +100,9 @@ public class Menu {
 
     }
 
-    static void createMenu2Level2Seach() throws IOException {
+
+
+    static void createSeach() throws IOException {
         BufferedReader q = new BufferedReader (new InputStreamReader(System.in));
         System.out.println("\n" +
                 "Выберите действие?\n" +
@@ -127,7 +133,8 @@ public class Menu {
 
     }
 
-    static void createMenu2Level2() throws IOException {
+
+    static void createCalculatingValues() throws IOException {
         BufferedReader g = new BufferedReader (new InputStreamReader(System.in));
         System.out.println("\n" +
                 "Выберите действие?\n" +

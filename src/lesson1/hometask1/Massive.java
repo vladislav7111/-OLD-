@@ -56,7 +56,6 @@ import java.util.Scanner;
         System.out.println("Сумма элементов массива: " + sum);
     }
 
-
     static void averageValue(int mas[]) {
         double average = 0;
         if (mas.length > 0)
@@ -69,9 +68,6 @@ import java.util.Scanner;
             System.out.println("Среднее значение всех элементов массива: " + average);
         }
     }
-
-    ////////////////////СОРТИРОВКА///////////////////////
-
 
     static void obVivod(int[] mas) {
         System.out.print("Ваш массив: ");
