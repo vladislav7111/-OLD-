@@ -6,17 +6,11 @@ import java.io.InputStreamReader;
 
 import static lesson1.hometask1.Massive.array;
 
-
- class Menu {
-
+public class Menu {
 
     static void createMenu() throws IOException {
         BufferedReader k = new BufferedReader (new InputStreamReader(System.in));
-        System.out.println("\n" +
-                "Выберите действие?\n" +
-                "1 - Операции\n" +
-                "2 - Печать\n" +
-                "3 - Выход");
+        MenuOptions.Sout1levelMenu();
         boolean quit = false;
         int menuItem;
         do {
@@ -24,11 +18,11 @@ import static lesson1.hometask1.Massive.array;
             menuItem = Integer.parseInt(k.readLine());
             switch (menuItem) {
                 case 1:
-                    System.out.println("Вы выбрали Операции:");
+                    System.out.println("Вы выбрали Операции.");
                     createMenu2Level();
                     break;
                 case 2:
-                    System.out.println("Вы выбрали Печать:");
+                    System.out.println("Вы выбрали Печать.");
                     createMenu2LevelPrint();
 
                     break;
@@ -42,14 +36,9 @@ import static lesson1.hometask1.Massive.array;
         System.out.println("Досвидания...");
     }
 
-
     static void createMenu2Level() throws IOException {
         BufferedReader m = new BufferedReader (new InputStreamReader(System.in));
-        System.out.println("\n" +
-                "Выберите действие?\n" +
-                "1 - Вычисление значений\n" +
-                "2 - Поиск\n" +
-                "3 - Назад");
+        MenuOptions.SoutOperations();
         boolean quit = false;
         int menuItem2Level;
         do {
@@ -57,18 +46,13 @@ import static lesson1.hometask1.Massive.array;
             menuItem2Level = Integer.parseInt(m.readLine());
             switch (menuItem2Level) {
                 case 1:
-                    System.out.println("Case 1");
                     createMenu2Level2();
                     break;
                 case 2:
                     createMenu2Level2Seach();
                     break;
                 case 3:
-                    System.out.println("\n" +
-                            "Выберите действие?\n" +
-                            "1 - Операции\n" +
-                            "2 - Печать\n" +
-                            "3 - Выход");
+                    MenuOptions.Sout1levelMenu();
                     quit = true;
                     break;
                 default:
@@ -102,11 +86,7 @@ import static lesson1.hometask1.Massive.array;
                     Massive.sortirovkaMassiva(array);
                     break;
                 case 4:
-                    System.out.println("\n" +
-                            "Выберите действие?\n" +
-                            "1 - Операции\n" +
-                            "2 - Печать\n" +
-                            "3 - Выход");
+                    MenuOptions.Sout1levelMenu();
                     quit = true;
                     break;
                 default:
@@ -137,11 +117,7 @@ import static lesson1.hometask1.Massive.array;
                     Massive.zamenaElementaMassiva(array);
                     break;
                 case 3:
-                    System.out.println("\n" +
-                            "Выберите действие?\n" +
-                            "1 - Вычисление значений\n" +
-                            "2 - Поиск\n" +
-                            "3 - Назад");
+                    MenuOptions.SoutOperations();
                     quit = true;
                     break;
                 default:
@@ -183,11 +159,7 @@ import static lesson1.hometask1.Massive.array;
                     Massive.averageValue(array);
                     break;
                 case 6:
-                    System.out.println("\n" +
-                            "Выберите действие?\n" +
-                            "1 - Вычисление значений\n" +
-                            "2 - Поиск\n" +
-                            "3 - Назад");
+                    MenuOptions.SoutOperations();
                     quit = true;
                     break;
                 default:
