@@ -8,8 +8,6 @@ import static lesson1.hometask1.Massive.array;
 
 public class Menu {
 
-
-
     static void createMenu() throws IOException {
         BufferedReader k = new BufferedReader (new InputStreamReader(System.in));
         MenuOptions.Sout1levelMenu();
@@ -35,7 +33,7 @@ public class Menu {
                     System.out.println("Неправильный выбор!");
             }
         } while (!quit);
-        System.out.println("Досвидания...");
+        System.out.println("Bye");
     }
 
 

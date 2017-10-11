@@ -33,6 +33,8 @@ import java.util.Scanner;
         for (int i = 0; i < mas.length; i++)
             if (maximum < mas[i]) maximum = mas[i];
         System.out.println(maximum);
+        MenuOptions.SoutOperations2level();
+
     }
 
     static void minValueInMassive(int mas[]) {
@@ -41,11 +43,13 @@ import java.util.Scanner;
         for (int i = 0; i < mas.length; i++)
             if (mas[i] < mas[0]) minimum = mas[i];
         System.out.println(minimum);
+        MenuOptions.SoutOperations2level();
     }
 
     static void kolElementov(int mas[]) {
         int a=mas.length;
         System.out.println("Колическтво элементов массива:" + a);
+        MenuOptions.SoutOperations2level();
     }
 
     static void summaElementov(int mas[]) {
@@ -54,6 +58,7 @@ import java.util.Scanner;
             sum=sum+mas[i];
         }
         System.out.println("Сумма элементов массива: " + sum);
+        MenuOptions.SoutOperations2level();
     }
 
     static void averageValue(int mas[]) {
@@ -66,6 +71,7 @@ import java.util.Scanner;
             }
             average = sum / mas.length;
             System.out.println("Среднее значение всех элементов массива: " + average);
+            MenuOptions.SoutOperations2level();
         }
     }
 
@@ -73,6 +79,7 @@ import java.util.Scanner;
         System.out.print("Ваш массив: ");
         for (int v : mas)
             System.out.print(v + " ");
+        MenuOptions.SoutOperations2levelPrint();
     }
 
     static void obrVivod(int[] mas) {
@@ -80,6 +87,7 @@ import java.util.Scanner;
         for (int i=mas.length-1; i>=0; i--){
             System.out.print(mas[i] + " ");
         }
+        MenuOptions.SoutOperations2levelPrint();
     }
 
     static void sortirovkaMassiva(int[] mas) {
@@ -98,6 +106,7 @@ import java.util.Scanner;
         while (changes);
         for (int v : mas)
             System.out.print(v + " ");
+        MenuOptions.SoutOperations2levelPrint();
     }
 
     static void zamenaElementaMassiva(int[] mas) {
@@ -110,6 +119,7 @@ import java.util.Scanner;
         mas [size] = size1;
         for (int v : mas)
             System.out.print(v + " ");
+        MenuOptions.SoutOperations2levelPrint();
     }
 
     static void elementVMasive(int[] mas) {
@@ -122,6 +132,7 @@ import java.util.Scanner;
         }
         if (count){System.out.println("Данный элемент есть в массиве.");}
         else System.out.println("Данного элемента нет в массиве.");
+        MenuOptions.SoutOperations2levelPrint();
     }
 
 }
