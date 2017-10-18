@@ -73,9 +73,6 @@ public class Car implements Comparable<Car> {
                 ", speed=" + speed +
                 '}';
     }
-
-
-
     @Override
     public int compareTo(Car o) {
         return Integer.valueOf(id).compareTo(o.getId());
