@@ -1,7 +1,7 @@
 package lesson2.hometask2;
 
-public class Car {
 
+public class Car implements Comparable<Car> {
     private int id;
     private String name;
     private double weight;
@@ -72,5 +72,13 @@ public class Car {
                 ", weight=" + weight +
                 ", speed=" + speed +
                 '}';
+    }
+
+
+
+    @Override
+    public int compareTo(Car o) {
+        return Integer.valueOf(id).compareTo(o.getId());
+
     }
 }
