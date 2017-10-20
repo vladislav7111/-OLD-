@@ -5,10 +5,12 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException {
 
+        Massive m = new Massive();
+        m.createMassive();
 
-        lesson1.hometask1.Massive.createMassive();
+        Menu menu = new Menu();
+        menu.createMenu();
 
-        lesson1.hometask1.Menu.createMenu();
     }
 }
 

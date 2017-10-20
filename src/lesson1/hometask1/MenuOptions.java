@@ -1,7 +1,7 @@
 package lesson1.hometask1;
 
 public class MenuOptions {
-    static void Sout1levelMenu() {
+    static void sout1levelMenu() {
         System.out.println("\n" +
                 "Выберите действие?\n" +
                 "1 - Операции\n" +
@@ -9,7 +9,7 @@ public class MenuOptions {
                 "3 - Выход");
     }
 
-    static void SoutOperations() {
+    static void soutOperations() {
         System.out.println("\n" +
                 "Выберите действие?\n" +
                 "1 - Вычисление значений\n" +
@@ -17,7 +17,7 @@ public class MenuOptions {
                 "3 - Назад");
     }
 
-    static void SoutOperations2level() {
+    static void soutOperations2level() {
         System.out.println("\n" +
                 "Выберите действие?\n" +
                 "1 - Найти максимум\n" +
@@ -28,7 +28,7 @@ public class MenuOptions {
                 "6 - Назад ");
     }
 
-    static void SoutOperations2levelPrint() {
+    static void soutOperations2levelPrint() {
         System.out.println("\n" +
                 "Выберите действие?\n" +
                 "1 - Печать массива в прямом порядке\n" +
@@ -37,7 +37,7 @@ public class MenuOptions {
                 "4 - Назад");
     }
 
-    static void SoutOperations2levelSeach() {
+    static void soutOperations2levelSeach() {
         System.out.println("\n" +
                 "Выберите действие?\n" +
                 "1 - Входит ли элемент в массив?\n" +
