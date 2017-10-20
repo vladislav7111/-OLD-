@@ -1,17 +1,18 @@
 package lesson1.hometask1;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
-import static lesson1.hometask1.Massive.array;
+import java.io.*;
+import static lesson1.hometask1.MassiveGenerator.array;
+import static lesson1.hometask1.Massive.*;
+import static lesson1.hometask1.MenuOptions.*;
+import static lesson1.hometask1.Operations.*;
+import static lesson1.hometask1.Print.*;
 
 public class Menu {
 
-     void createMenu() throws IOException {
+    void createMenu() throws IOException {
         try {
             BufferedReader k = new BufferedReader (new InputStreamReader(System.in));
-            MenuOptions.sout1levelMenu();
+            sout1levelMenu();
             boolean quit = false;
             int menuItem;
             do {
@@ -25,7 +26,6 @@ public class Menu {
                     case 2:
                         System.out.println("Вы выбрали Печать.");
                         createPrint();
-
                         break;
                     case 3:
                         quit = true;
@@ -38,7 +38,7 @@ public class Menu {
         }
         catch (NumberFormatException e)  {
             System.out.println("Вводите числовые значения.\n" +
-                               "Возвращение в главное меню...");
+                    "Возвращение в главное меню...");
             createMenu();
         }
 
@@ -46,7 +46,7 @@ public class Menu {
 
 
 
-    static void createOperations() throws IOException {
+     void createOperations() throws IOException {
         BufferedReader m = new BufferedReader (new InputStreamReader(System.in));
         MenuOptions.soutOperations();
         boolean quit = false;
@@ -62,7 +62,7 @@ public class Menu {
                     createSeach();
                     break;
                 case 3:
-                    MenuOptions.sout1levelMenu();
+                    sout1levelMenu();
                     quit = true;
                     break;
                 default:
@@ -72,14 +72,9 @@ public class Menu {
 
     }
 
-    static void createPrint() throws IOException {
+     void createPrint() throws IOException {
         BufferedReader p = new BufferedReader (new InputStreamReader(System.in));
-        System.out.println("\n" +
-                "Выберите действие?\n" +
-                "1 - Печать массива в прямом порядке\n" +
-                "2 - Печать массива в обратном порядке\n" +
-                "3 - Печать массива в отсортированном порядке\n" +
-                "4 - Назад");
+         soutOperations2levelPrint();
         boolean quit = false;
         int menuItem2LevelPrint;
         do {
@@ -87,16 +82,16 @@ public class Menu {
             menuItem2LevelPrint = Integer.parseInt(p.readLine());
             switch (menuItem2LevelPrint) {
                 case 1:
-                    Massive.obVivod(array);
+                    normalOutput(array);
                     break;
                 case 2:
-                    Massive.obrVivod(array);
+                    reversOutput(array);
                     break;
                 case 3:
-                    Massive.sortirovkaMassiva(array);
+                    sortirovkaMassiva(array);
                     break;
                 case 4:
-                    MenuOptions.sout1levelMenu();
+                    sout1levelMenu();
                     quit = true;
                     break;
                 default:
@@ -108,13 +103,9 @@ public class Menu {
 
 
 
-    static void createSeach() throws IOException {
+     void createSeach() throws IOException {
         BufferedReader q = new BufferedReader (new InputStreamReader(System.in));
-        System.out.println("\n" +
-                "Выберите действие?\n" +
-                "1 - Входит ли элемент в массив?\n" +
-                "2 - Замена элемента массива\n" +
-                "3 - Назад");
+         soutOperations2levelSeach();
         boolean quit = false;
         int menuItem2LevelSeach;
         do {
@@ -122,14 +113,14 @@ public class Menu {
             menuItem2LevelSeach = Integer.parseInt(q.readLine());
             switch (menuItem2LevelSeach) {
                 case 1:
-                    Massive.elementVMasive(array);
+                    elementVMasive(array);
 
                     break;
                 case 2:
-                    Massive.zamenaElementaMassiva(array);
+                    zamenaElementaMassiva(array);
                     break;
                 case 3:
-                    MenuOptions.soutOperations();
+                    soutOperations();
                     quit = true;
                     break;
                 default:
@@ -140,16 +131,9 @@ public class Menu {
     }
 
 
-    static void createCalculatingValues() throws IOException {
+     void createCalculatingValues() throws IOException {
         BufferedReader g = new BufferedReader (new InputStreamReader(System.in));
-        System.out.println("\n" +
-                "Выберите действие?\n" +
-                "1 - Найти максимум\n" +
-                "2 - Найти минимум\n" +
-                "3 - Нийти количество\n" +
-                "4 - Найти сумму значений\n" +
-                "5 - Найти среднее значение\n" +
-                "6 - Назад ");
+         soutOperations2level();
         boolean quit = false;
         int menuItem3Level;
         do {
@@ -157,22 +141,22 @@ public class Menu {
             menuItem3Level = Integer.parseInt(g.readLine());
             switch (menuItem3Level) {
                 case 1:
-                    Massive.maxValueInMassive(array);
+                    maxValueInMassive(array);
                     break;
                 case 2:
-                    Massive.minValueInMassive(array);
+                    minValueInMassive(array);
                     break;
                 case 3:
-                    Massive.kolElementov(array);
+                    kolElementov(array);
                     break;
                 case 4:
-                    Massive.summaElementov(array);
+                    summaElementov(array);
                     break;
                 case 5:
-                    Massive.averageValue(array);
+                    averageValue(array);
                     break;
                 case 6:
-                    MenuOptions.soutOperations();
+                    soutOperations();
                     quit = true;
                     break;
                 default:
